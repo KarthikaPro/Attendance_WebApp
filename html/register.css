@@ -1,0 +1,21 @@
+ body {
+    background-color: antiquewhite;
+ }
+.register-form {
+    width: 50%;
+    padding: 5px;
+}
+
+.field {
+    margin: 12px 0;
+}
+
+.login {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.btn-2 {
+    padding: 1rem 0 0 0;
+}

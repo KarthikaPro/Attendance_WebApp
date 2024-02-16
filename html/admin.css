@@ -1,0 +1,12 @@
+.userDetails {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: center;
+    margin: 0 auto;
+    border:1px solid rgba(42, 44, 45, 0.763);
+}
+p {
+    cursor: pointer;
+    text-align: center;
+}

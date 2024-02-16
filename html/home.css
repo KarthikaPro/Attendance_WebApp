@@ -1,0 +1,36 @@
+#date,#time {
+    text-align: center;
+}
+
+#time {
+    padding: 0 0 50px 0;
+}
+.btn-class {
+    width: 20%;
+}
+.home {
+    margin: 8rem 0 0 12rem;
+}
+
+p {
+    text-align: center;
+}
+
+.viewbtn {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: rgb(14, 79, 79);
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+#loginButton , #logoutbtn{
+    color: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: rgb(14, 79, 79);
+}
