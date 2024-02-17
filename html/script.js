@@ -9,7 +9,7 @@ async function fetchData() {
 
         // Attempt to parse the response as JSON
         const data = await response.json();
-       
+       console.log(data);
         displayData(data);
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -30,17 +30,20 @@ function displayData(data) {
         return;
     }
 
+    const htmlContent = data.map(attendance => {
+    return (`
+    <p>Date: ${attendance.date}</p>
+    <p>User ID: ${attendance.userid}</p>
+    <p>Name: ${attendance.username}</p>
+    <p>Login_Status: ${attendance.login_status}</p>
+    <p>Login_Time: ${attendance.login_time}</p>
+    <p>Logout_Status: ${attendance.logout_status}</p>
+    <p>Logout_Time: ${attendance.logout_time}</p>
+    <hr/>
+    `);
+});
     // Format and display the data in the 'details' container
-    userDataContainer.innerHTML = `
-        <p>Date: ${data.date}</p>
-        <p>User ID: ${data.userid}</p>
-        <p>Name: ${data.username}</p>
-        <p>Login_Status: ${data.login_status}</p>
-        <p>Login_Time: ${data.login_time}</p>
-        <p>Logout_Status: ${data.logout_status}</p>
-        <p>Logout_Time: ${data.logout_time}</p>
-        <hr/>
-    `;
+    userDataContainer.innerHTML = htmlContent;
 }
 
 // Fetch data when the page loads

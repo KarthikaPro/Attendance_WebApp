@@ -190,8 +190,9 @@ app.get('/api/users', async (req, res) => {
     try {
         const fetchData = 'SELECT * FROM attendance WHERE username=$1 AND userid=$2 ';
         const result = await pool.query(fetchData,[name,userId]);
-        const users = result.rows[0];
+        const users = result.rows;
         res.status(200).json(users);
+        console.log(userId);
     } catch (error) {
         console.error(error);
         res.status(500).send('Internal Server Error');
